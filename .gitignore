@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out/
+
+# Environment — never commit real credentials
+.env
+.env.local
+.env.production
+
+# Foundry build artifacts
+contracts/out/
+contracts/cache/
+
+# Logs
+*.log
+/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Circle recovery file — never commit
+.circle/recovery_file.dat
+.circle/*.dat

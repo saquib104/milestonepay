@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── MilestonePay design tokens ──────────────────────────────────────────── */
+:root {
+  /* Canvas */
+  --bg:              #F7F6F2;
+  --bg-alt:          #EFEDE7;
+
+  /* Surfaces */
+  --surface:         rgba(255,255,255,0.82);
+  --surface-strong:  rgba(255,255,255,0.96);
+  --surface-muted:   #F0EEE9;
+  --surface-hover:   rgba(255,255,255,0.60);
+
+  /* Ink */
+  --ink:             #1C2B2A;
+  --ink-2:           #2F4140;
+  --muted:           #5A6E6C;
+  --subtle:          #8FA09E;
+
+  /* Borders */
+  --border:          rgba(28,43,42,0.10);
+  --border-strong:   rgba(28,43,42,0.30);
+
+  /* Primary action — deep teal */
+  --accent:          #0F5C55;
+  --accent-hover:    #0A453F;
+  --accent-light:    rgba(15,92,85,0.08);
+  --accent-mid:      rgba(15,92,85,0.16);
+
+  /* Warm amber accent (sparingly) */
+  --warm:            #C97A2F;
+  --warm-light:      rgba(201,122,47,0.10);
+
+  /* Semantic */
+  --success:         #1A7A4A;
+  --success-light:   rgba(26,122,74,0.10);
+  --danger:          #BA2B2B;
+  --danger-light:    rgba(186,43,43,0.10);
+  --warning:         #B56B10;
+  --warning-light:   rgba(181,107,16,0.10);
+
+  /* Focus */
+  --focus:           #5AADA5;
+
+  /* Shadow */
+  --shadow-sm:       0 1px 3px rgba(28,43,42,0.06), 0 1px 2px rgba(28,43,42,0.04);
+  --shadow-md:       0 4px 12px rgba(28,43,42,0.08), 0 2px 4px rgba(28,43,42,0.04);
+  --shadow-lg:       0 12px 32px rgba(28,43,42,0.10), 0 4px 8px rgba(28,43,42,0.06);
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography helpers ───────────────────────────────────────────────────── */
+.display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.025em; }
+.mono    { font-family: 'JetBrains Mono', Menlo, monospace; }
+
+/* ── Focus ring ────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Scrollbar (Webkit) ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+
+/* ── Sonner toast override ────────────────────────────────────────────────── */
+[data-sonner-toast] {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 13px !important;
+}
